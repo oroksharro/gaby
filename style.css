@@ -31,6 +31,7 @@
     display: flex;
 }
 .secondtable, .firsttable{
+    table-layout: fixed;
     display: flex;
     margin-left: 20pxpx;
     border: 1px solid rgb(12, 4, 4);
@@ -39,6 +40,10 @@
     padding: 12px 34px;
     margin-right: 20px;
     width:50%;
+}
+.secondtable td , .firsttable td{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .secondtable input{
     border: transparent;
@@ -53,4 +58,46 @@
 }
 .dateTime{
     font-size: 36px;
+}
+@media(max-width: 700px) {
+    .title{
+        color: teal;
+    }
+    .homescreen{
+        color: rgb(0, 0, 0);
+        width: 380px;
+        display: block;
+        margin-right: 2px;
+    }
+    .btn{
+        background-color: tomato ;
+    }
+    .print{
+        background-color:green ;
+    }
+    .firsttable, .secondtable{
+        table-layout: fixed;
+        width: 100%;
+    }
+}
+.longtext{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.textarea{
+    height: 100px;
+    width: 171px;
+    margin-top: 10px;
+}
+.des{
+    font-size: 36px;
+    font-weight: 100;
+}
+.secondtable span{
+    font-size: 20px;
+}
+.dateTime{
+    font-size: 20px;
+    width: 200px;
 }

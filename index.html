@@ -16,8 +16,12 @@
         <tr>
             <td>Name:</td>
             <td>
-                <input type="name" id="item" placeholder="item">
+                <input class="longtext" type="name" id="item" placeholder="item">
             </td>
+        </tr>
+        <tr >
+            <td><h3 class="des">Description:</span></td>
+            <td><textarea  class="textarea" id="des"  row="5" cols="20"></textarea></td>
         </tr>
         <tr>
             <td>
@@ -50,9 +54,13 @@
             <table class="table" id="printTable">
                 <tr>
                     <td>Name:</td>
-                    <td>
-                        <span id="span-item"></span>
+                    <td >
+                        <span class="longtext" id="span-item"></span>
                     </td>
+                </tr>
+                <tr >
+                    <td><h3 class="des">Description:</span></td>
+                    <td><span class="textarea" id="span-des"  row="2" cols="20"></span></td>
                 </tr>
                 <tr>
                     <td>
@@ -80,7 +88,7 @@
                 </tr>
                 <tr>
                     <td>Time:</td>
-                    <h2 class="dateTime" id="currentTime"></h2>
+                    <td><input class="dateTime" id="currentTime"></input></td>
                     
                 </tr>
                     </table>
@@ -96,13 +104,16 @@
     function sum(){
         var price = parseFloat(document.getElementById("price").value) ;
         var name = document.getElementById("item").value;
+        var description = document.getElementById("des").value;
         var tax = parseFloat(document.getElementById("tax").value);
         var result = price + price * tax ;
-        document.getElementById("result").value = result+'&euro;';
+
+        document.getElementById("result").value = result;
         document.getElementById("span-item").innerHTML = name;  
         document.getElementById("span-price").innerHTML = price+'&euro;';  
         document.getElementById("span-tax").innerHTML = tax;  
         document.getElementById("span-result").innerHTML = result+'&euro;';
+        document.getElementById("span-des").innerHTML = description;
         
         var today = new Date();
         var date = today.getFullYear()+"/" +(today.getMonth()+1)+"/"+today.getDate();
