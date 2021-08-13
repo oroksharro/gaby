@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1 class="title">Domino Juwelary</h1>
+    <div class="homescreen">
+        <div class="firsttable">
+            <table class="table">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="name" id="item" placeholder="item">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Price:
+            </td>
+            <td>
+                <input type="text" id="price" placeholder="price">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tax:
+            </td>
+            <td>
+                <input type="text" id="tax" placeholder="tax">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="sum()" class="btn">Result</button>
+            </td>
+            <td>
+                <input type="text" id="result" placeholder="result">
+            </td>
+        </tr>
+            </table>
+        </div>
+        <div class="secondtable">
+            <h1>Domino Rechnung</h2>
+            <table class="table" id="printTable">
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <span id="span-item"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Price:
+                    </td>
+                    <td>
+                        <span id="span-price"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tax:
+                    </td>
+                    <td>
+                        <span id="span-tax"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Result:
+                    </td>
+                    <td>
+                        <span id="span-result"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Time:</td>
+                    <h2 class="dateTime" id="currentTime"></h2>
+                    
+                </tr>
+                    </table>
+        </div>
+        
+    </div>
+    <button onclick="printresult()" class="btn print">PRINT</button>
+
+<!-- javascricpt -->    
+<script>
+            
+
+    function sum(){
+        var price = parseFloat(document.getElementById("price").value) ;
+        var name = document.getElementById("item").value;
+        var tax = parseFloat(document.getElementById("tax").value);
+        var result = price + price * tax ;
+        document.getElementById("result").value = result+'&euro;';
+        document.getElementById("span-item").innerHTML = name;  
+        document.getElementById("span-price").innerHTML = price+'&euro;';  
+        document.getElementById("span-tax").innerHTML = tax;  
+        document.getElementById("span-result").innerHTML = result+'&euro;';
+        
+        var today = new Date();
+        var date = today.getFullYear()+"/" +(today.getMonth()+1)+"/"+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+ ' '+time;
+        document.getElementById("currentTime").value = dateTime;
+            
+    }
+    function printresult(){
+        var divToPrint = document.getElementById("printTable");
+        newWin = window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+
+    }
+</script>
+</body>
+
+</html>
