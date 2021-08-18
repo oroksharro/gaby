@@ -118,4 +118,7 @@
         width: 150px;
         height: 50px;
     }
+    .btn{
+        background-color: red;
+    }
 }
