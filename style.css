@@ -29,10 +29,10 @@
 }
 .homescreen{
     display: flex;
+    width: 100%;
 }
 .secondtable, .firsttable{
     table-layout: fixed;
-    display: flex;
     margin-left: 20px;
     border: 1px solid rgb(12, 4, 4);
     border-radius: 20px;
@@ -59,13 +59,13 @@
 .dateTime{
     font-size: 36px;
 }
-@media(max-width: 700px) {
+@media(max-width: 1000px) {
     .title{
         color: teal;
     }
     .homescreen{
         color: rgb(0, 0, 0);
-        width: 338px;
+        width: 82%;
         display: block;
         margin-right: 2px;
     }
@@ -74,7 +74,7 @@
     }
     .print{
         background-color:green ;
-        width: 400px;
+        width: 92%;
         justify-content: center;
         text-align: center;
     }
