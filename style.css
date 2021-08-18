@@ -33,7 +33,7 @@
 .secondtable, .firsttable{
     table-layout: fixed;
     display: flex;
-    margin-left: 20pxpx;
+    margin-left: 20px;
     border: 1px solid rgb(12, 4, 4);
     border-radius: 20px;
     display: inline-block;
@@ -65,7 +65,7 @@
     }
     .homescreen{
         color: rgb(0, 0, 0);
-        width: 380px;
+        width: 338px;
         display: block;
         margin-right: 2px;
     }
@@ -74,10 +74,14 @@
     }
     .print{
         background-color:green ;
+        width: 400px;
+        justify-content: center;
+        text-align: center;
     }
     .firsttable, .secondtable{
         table-layout: fixed;
         width: 100%;
+        margin: 0 auto;
     }
 }
 .longtext{
@@ -91,6 +95,7 @@
     margin-top: 10px;
 }
 .des{
+    padding-top: 20px;
     font-size: 36px;
     font-weight: 100;
 }
@@ -100,4 +105,7 @@
 .dateTime{
     font-size: 20px;
     width: 200px;
+}.textarea2{
+    color: rgba(84, 85, 85, 0.979);
+    font-weight:500;
 }

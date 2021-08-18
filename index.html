@@ -20,7 +20,7 @@
             </td>
         </tr>
         <tr >
-            <td><h3 class="des">Description:</span></td>
+            <td><span class="des">Description:</span></td>
             <td><textarea  class="textarea" id="des"  row="5" cols="20"></textarea></td>
         </tr>
         <tr>
@@ -59,8 +59,8 @@
                     </td>
                 </tr>
                 <tr >
-                    <td><h3 class="des">Description:</span></td>
-                    <td><span class="textarea" id="span-des"  row="2" cols="20"></span></td>
+                    <td>Description:</td>
+                    <td><span class="textarea2" id="span-des"  row="2" cols="20"></span></td>
                 </tr>
                 <tr>
                     <td>
@@ -93,14 +93,13 @@
                 </tr>
                     </table>
         </div>
-        
     </div>
     <button onclick="printresult()" class="btn print">PRINT</button>
+
 
 <!-- javascricpt -->    
 <script>
             
-
     function sum(){
         var price = parseFloat(document.getElementById("price").value) ;
         var name = document.getElementById("item").value;
@@ -128,7 +127,6 @@
         newWin.document.write(divToPrint.outerHTML);
         newWin.print();
         newWin.close();
-
     }
 </script>
 </body>
